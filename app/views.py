@@ -6,7 +6,6 @@ from rest_framework.renderers import TemplateHTMLRenderer
 import stripe
 
 from .models import Item
-from .serializers import ItemSerializer
 from django.conf import settings
 
 
@@ -39,7 +38,7 @@ class BuyItemAPIView(APIView):
                 'product_data': {
                 'name': item.name,
                 },
-                'unit_amount': int(item.price),
+                'unit_amount': int(item.price * 100),
             },
             'quantity': 1,
             }],
