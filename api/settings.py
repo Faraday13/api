@@ -29,7 +29,7 @@ STRIPE_API_PRIVATE_KEY = env('STRIPE_API_PRIVATE_KEY')
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = env.str('DJANGO_SECRET_KEY', 'django-insecure-_$06^=agb!vp-b1u#9psp4#n+vc6d1ife8%#jd1a4v5e83kmkp')
+SECRET_KEY = env.str('DJANGO_SECRET_KEY')
 
 
 
@@ -94,11 +94,11 @@ WSGI_APPLICATION = 'api.wsgi.application'
 DATABASES = {     
 		'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'HOST' : env.str('POSTGRES_HOST', 'postgres'),
-            'NAME': env.str('POSTGRES_DB', 'apidb'),
-            'USER': env.str('POSTGRES_USER', 'admin'),
-            'PASSWORD': env.str('POSTGRES_PASSWORD', 'qwerty'),
-            'PORT': env.str('POSTGRES_PORT', '5432'),
+            'HOST' : env.str('POSTGRES_HOST'),
+            'NAME': env.str('POSTGRES_DB'),
+            'USER': env.str('POSTGRES_USER'),
+            'PASSWORD': env.str('POSTGRES_PASSWORD'),
+            'PORT': env.str('POSTGRES_PORT'),
         }
 }
 
