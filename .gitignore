@@ -1,0 +1,6 @@
+*__pycache__
+/.env
+/env
+/heroku_set_variables.sh
+/Procfile
+/runtime.txt
