@@ -2,6 +2,4 @@
 /.env
 /env
 /heroku_set_variables.sh
-/Procfile
-/runtime.txt
 /start_webapp.sh
